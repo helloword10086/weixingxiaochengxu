@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "popup": "../../components/popup/popuo",
+    "test":"../../components/test/test"
+  }
+}

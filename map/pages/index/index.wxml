@@ -1,0 +1,8 @@
+<view class="section"> 
+  <input placeholder="输入关键字" auto-focus type="text" bindinput="bindKeyInput" name="value"/> 
+</view> 
+<view class="sug_info" style='display: {{value ==="" ? "none" : "block"}}'> 
+  <text>{{sugData}}</text> 
+
+</view>
+<text>{{value}}</text>

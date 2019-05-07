@@ -1,0 +1,17 @@
+<!--pages/input/input.wxml-->
+<view class='chance'> 
+    <view class='log'>
+        <image src='/mages/dingwei.png'></image>
+        <text class='log-b'>南昌市</text>
+        <image src='/mages/sou1.png' class='addressImge'></image>
+        <input placeholder='请输入输入地址' auto-focus type="text" bindinput="bindKeyInput" name="value"></input>
+    </view> 
+     <view class="sug_info"  style='display: {{value ==="" ? "none" : "block"}}'> 
+         <text>{{sugData}}</text> 
+      </view>
+    <view class='log-adress'>
+       <text>江西财经大学（麦庐校区）</text>
+       <image src='/mages/din1.png'></image>
+       <text> 重定位</text>
+    </view>
+</view>

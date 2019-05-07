@@ -1,0 +1,39 @@
+<!--pages/main/main.wxml-->
+<view class='top'>
+    <image src='/mages/dingwei.png'></image>
+    <text class='address' bindtap='addressInput'>({{markers}})</text>
+</view>
+<view class='sou'>
+    <image src='/mages/sou1.png'></image>
+    <input placeholder='哈姆西克匹萨  满20减10' bindtap='searchFoot'></input>
+</view>
+<view class='mage'>
+     <image src='/mages/xin.png'></image>
+</view>
+<!-- <view class='shop-title'>
+  <view class='shop-foot' wx:for="{{url}}">
+   <image src='{{item}}'></image>
+   <text>品牌连锁</text>
+  </view>
+</view> -->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  
+    <swiper-item>
+    <view class='shop-title'>
+       <view class='shop-foot' wx:for="{{url}}">
+         <image src='{{item}}'></image>
+         <text>品牌连锁</text>
+       </view>
+    </view>
+    </swiper-item>
+     <swiper-item>
+    <view class='shop-title'>
+       <view class='shop-foot' wx:for="{{url}}">
+         <image src='{{item}}'></image>
+         <text>品牌连锁</text>
+       </view>
+    </view>
+    </swiper-item>
+  
+</swiper>

@@ -1,0 +1,38 @@
+<view class='container'>
+    <view class='new-outer'>
+        <view class='new-item' bindtap='show'>
+         <image src='https://677a-gzhiyi-154dd4-1256703754.tcb.qcloud.la/index-group.png?sign=464daa4bfd906e1a9b5bedf039bc7118&t=1545558867'></image>
+           <view class='right-conner'>
+              <view class='item-name'>新建群发</view>
+              <view class='icon-arrow'>
+                 <van-icon name="arrow"></van-icon>
+                 
+              </view>
+           </view>
+        </view>
+    </view>
+     <van-dialog
+  use-slot
+  async-close
+  show="false"
+  show-cancel-button
+  confirm-button-open-type="getUserInfo"
+  bind:cancel="closeDialog"
+  bind:confirm="creatGroup"
+  title="创建一个群"
+>
+      <view class='group-dialog-body'>
+      <van-cell-group>
+  <van-field
+    value="{{ value }}"
+    
+    label="群众名"
+    maxlength="{{20}}"
+     placeholder="名字"
+     bind:change="onChange"
+  />
+</van-cell-group>
+      </view>
+      
+</van-dialog>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/search/search.wxml-->
+<view class='contain'>
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='search'>
+     <image src='/mages/sou1.png' ></image>
+       
+       <input placeholder='不一韩式炸鸡（放家店)'name="input"> </input>
+       <button  plain="true" formType="submit">搜索</button>
+    </view>
+</form>
+    <view class='search-pop'>
+       <text class='search-title'>热门搜索</text>
+        <view class='search-foot'>
+            <text class='foot'>粥</text>
+            <text class='foot'>过桥米线</text>
+            <text class='foot'>麻辣烫</text>
+        </view>
+       
+    </view>
+    <view class='delata'>
+        <view class='title'>
+            <text class='delata-title'>历史纪录</text>
+            <image src='/mages/dedata.png' bindtap='delate'></image>
+        </view >
+        <view class='search-content' wx:for='{{text}}' style='display: {{flag ? "block" : "none"}}'>
+        <!-- <text class='foot'>粥</text> -->
+        <text class='foot'>{{item.input}}</text>
+        
+        </view>
+    </view>
+</view>

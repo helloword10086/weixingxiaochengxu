@@ -1,0 +1,69 @@
+/* pages/main/main.wxss */
+.address{
+  position: absolute;
+  display: block;
+   top: 5px;
+    max-width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    left: 32px;
+}
+.top image{
+  display: block;
+  height: 32px;
+  width: 32px;
+ 
+}
+.mage image{
+  display: block;
+  width: 100%;
+  height: 72px;
+}
+input{
+  background-color: #ddd;
+  height: 30px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+}
+.sou{
+  overflow: hidden;
+  position: relative;
+}
+.sou image{
+ position: absolute;
+ height: 15px;
+ width: 15px;
+ z-index: 10;
+ left: 23px;
+ top: 9px;
+}
+.shop-title {
+overflow: hidden;
+
+}
+.shop-foot{
+  float: left;
+  margin-left: 10px;
+}
+.shop-title image{
+ 
+ display: block;
+ height: 44px;
+ width: 44px;
+ margin-bottom: 5px;
+margin-top: 15px;
+
+text-align: center;
+}
+.shop-foot text{
+  font-size: 13px;
+  text-align: center;
+  display: block;
+}
+swiper{
+  height: 300px;
+  
+}

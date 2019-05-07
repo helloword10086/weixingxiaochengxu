@@ -1,0 +1,74 @@
+/* pages/search/search.wxss */
+.search input{
+  background: #ddd;
+  width: 70%;
+  margin-left: 10px;
+  text-align: center;
+  border-radius: 4px;
+}
+.search button{
+  font-size: 16px;
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #e98f36
+}
+.search image{
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+.search, .search-pop{
+  overflow: hidden;
+
+}
+.search-pop{
+  margin-bottom: 20px;
+}
+.search-title{
+  margin-left: 10px;
+  color: #999;
+  font-size: 14px;
+  display: block;
+  padding: 15px 10px;
+  border-bottom: 1px  solid #ddd;
+}
+.search-foot{
+  margin: 10px;
+  font-size: 10px;
+}
+ .foot{
+  border: 1px solid #ddd;
+  display: block;
+  padding: 5px 8px;
+  float: left;
+  margin-left: 10px;
+  font-size: 10px;
+}
+.delata image{
+height: 16px;
+width: 16px;
+display: block;
+float: right;
+margin-right: 20px;
+}
+.delata .delata-title{
+  color: #999;
+  font-size: 14px;
+ 
+  
+
+}
+.delata .title{
+  overflow: hidden;
+  margin-left:10px;
+  border-bottom: 1px solid #ddd; 
+  margin-bottom: 10px;
+}
