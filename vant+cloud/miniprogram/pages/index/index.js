@@ -1,21 +1,68 @@
-// miniprogram/pages/index/index.js
+import Notify from '../dist/notify/notify'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    value:'',
-    flag:false
+    groupName: '',
+    newGroupModal: false
   },
-  onChange(event){
-    // console.log(event.detail)
-  this.setData({
-    value: event.detail
-  })
+  showNewGroupModal() {
+    this.setData({
+      newGroupModal: true
+    })
   },
-  creatGroup(){
+  onGroupNameChange(event) {
+    this.setData({
+      groupName: event.detail
+    })
+  },
+  colseDialog() {
+    this.setData({
+      newGroupModal: false
+    })
+  },
+  creatGroup() {
+    let self = this
+    if (self.data.groupName === '') {
+      Notify({
+        text: '起个名字吧',
+        duration: 1500,
+        selector: '#notify-selector',
+        backgroundColor: '#dc3545'
+      });
+      self.selectComponent('#new-group-modal').stopLoading()
+      return
+    } else {
+         wx.cloud.callFunction({
+           name:"creatGroup",
+           data:{
+             groupName: self.data.groupName
+           },
+           success(res){
+            self.setData({
+              newGroupModal: false,
+              groupName: '',
+            })
+             Notify({
+               text: '创建成功',
+               duration: 1500,
+               selector: '#notify-selector',
+               backgroundColor: '#28a745'
+             });
 
+             setTimeout(() =>{
+              wx.switchTab({
+                url: '/pages/group/group',
+              })
+             },1500)
+           },
+           fail(error){
+              console.log(error)
+           }
+         }) 
+    }
   },
 
   /**
